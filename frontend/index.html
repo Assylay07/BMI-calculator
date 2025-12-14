@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>BMI Calculator</h1>
+
+    <form id="bmi-form" action="/calculate-bmi" method="POST" novalidate>
+      <label for="weight">Weight (kg)</label>
+      <input id="weight" name="weight" type="number" step="any" placeholder="Example, 70" required>
+
+      <label for="height">Height (meters)</label>
+      <input id="height" name="height" type="number" step="any" placeholder="Example, 1.75" required>
+
+      <button type="submit">Calculate BMI</button>
+    </form>
+
+    <div id="message" class="message" aria-live="polite"></div>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>

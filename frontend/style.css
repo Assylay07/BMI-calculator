@@ -1,0 +1,144 @@
+/* Reset box sizing */
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f0f4ff, #e8f7f7);
+  color: #1c1c1c;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: 24px;
+  background: #ffffffee;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-4px);
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  color: #2c3e50;
+}
+
+form {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #34495e;
+}
+
+input[type="number"] {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #cfd8dc;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input[type="number"]:focus {
+  border-color: #4aa1f3;
+  box-shadow: 0 0 0 5px rgba(74,161,243,0.15);
+}
+
+button[type="submit"] {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #2d3370, #1e88e5);
+  color: white;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #1e88e5, #1565c0);
+}
+
+.message {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #d32f2f;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Result box */
+.result-box {
+  margin-top: 22px;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.3s;
+}
+
+.result-box:hover {
+  transform: scale(1.02);
+}
+
+.result-box .bmi-value {
+  font-size: 2.4rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.result-box .bmi-category {
+  margin: 8px 0 0 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Colors per category */
+.result-box.normal {
+  background: #d0f5e8;
+  border: 1px solid #78e2c7;
+  color: #016a4e;
+}
+
+.result-box.underweight {
+  background: #dceeff;
+  border: 1px solid #7fb7ff;
+  color: #03407c;
+}
+
+.result-box.overweight {
+  background: #fff8dc;
+  border: 1px solid #ffe082;
+  color: #7a4f00;
+}
+
+.result-box.obese {
+  background: #ffe6e6;
+  border: 1px solid #ff9999;
+  color: #b71c1c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .container { padding: 20px; }
+  .result-box .bmi-value { font-size: 2rem; }
+}
