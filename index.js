@@ -45,7 +45,7 @@ app.post('/calculate-bmi', (req, res) => {
     cssClass = 'obese';
   }
 
-  // Ответ:страница с результатом и ссылкой назад
+  // страница с результатом и ссылкой назад
   res.send(`
     <!doctype html>
     <html lang="en">
